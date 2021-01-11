@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>My Portfolio</title>
+	</head>
+	<body class="light">
+		<div class="container">
+			<nav>
+				<span>Home</span>
+				<span>About</span>
+				<span>Portfolio</span>
+				<span>Contributions</span>
+				<span>Testimonials</span>
+				<span>Contact</span>
+				<span id="sun" style="display: none" onclick="toggleTheme()">🌞</span>
+				<span id="moon" onclick="toggleTheme()">🌒</span>
+			</nav>
+			<aside class="left-sidebar">
+				<div>
+					<img src="media/programmer.png" />
+				</div>
+				<p style="text-align: justify">
+					Hey, I'm Faisal Rashid. I love programming and learning new
+					technologies.
+				</p>
+				<div>
+					<span class="red">❤</span> Javasript <br />
+					<span class="red">❤</span> CSS <br />
+					<span class="red">❤</span> HTML <br />
+					<span class="red">❤</span> C# <br />
+					<span class="red">❤</span> React JS
+				</div>
+			</aside>
+			<main>
+				<div class="content-container">
+					<article class="article">
+						<h2>Why being a good developer at work is not enough</h2>
+						<h3>You may think you know it all, but you may be surprised</h3>
+						<div class="date">
+							<span role="img" aria-label="calendar">📅</span> Fri Aug 21 2020
+						</div>
+						<div>
+							I have come across many brilliant developers during my 3 years of
+							working as a developer myself. Some of them...
+						</div>
+					</article>
+					<article class="article">
+						<h2>Why are we no longer writing code for humans</h2>
+						<h3>
+							Overly complicated "machine-readable" code isn't helping anyone
+						</h3>
+						<div class="date">
+							<span role="img" aria-label="calendar">📅</span> Fri Aug 21 2020
+						</div>
+						<div>
+							While implementing cute solutions to problems and linting the hell
+							out of our code-bases, we lost our way.Whenever I look...
+						</div>
+					</article>
+					<article class="article">
+						<h2>React Redux you are great, but we need to take things slow.</h2>
+						<h3>Evils of rapidly evolving technologies</h3>
+						<div class="date">
+							<span role="img" aria-label="calendar">📅</span> Fri Aug 21 2020
+						</div>
+						<div>
+							Our company adopted ReactJs as a go-to solution for building
+							front-end applications a little over 2 years ago. So, as...
+						</div>
+					</article>
+					<article class="article">
+						<h2>Introducing Quizzo</h2>
+						<h3>
+							A simple online quiz game to play with friends, team-mates and
+							colleagues
+						</h3>
+						<div class="date">
+							<span role="img" aria-label="calendar">📅</span> Tue Apr 14 2020
+						</div>
+						<div>
+							At the time of writing this blog, there's a global pandemic going
+							on. People are staying indoors and mostly working...
+						</div>
+					</article>
+					<article class="article">
+						<h2>How to build a JavaScript Library</h2>
+						<h3>Writing a simple No-Dependency Image Lightbox library</h3>
+						<div class="date">
+							<span role="img" aria-label="calendar">📅</span> Thu Sep 26 2019
+						</div>
+						<div>
+							If you're a developer it's almost certain that you've used Code
+							Libraries. In simple terms, a Code Library is a...
+						</div>
+					</article>
+					<article class="article">
+						<h2>JavaScript vs jQuery</h2>
+						<h3>Learn DOM manipulation without using jQuery</h3>
+						<div class="date">
+							<span role="img" aria-label="calendar">📅</span> Mon Jul 29 2019
+						</div>
+						<div>
+							jQuery has been the savior for so many new and coming Web
+							Developers, including myself. If you wanted to learn...
+						</div>
+					</article>
+					<article class="article">
+						<h2>How to Write an Unbeatable Tic-Tac-Toe in JavaScript</h2>
+						<h3>A simple read into the logic of the game</h3>
+						<div class="date">
+							<span role="img" aria-label="calendar">📅</span> Mon Apr 15 2019
+						</div>
+						<div>
+							Writing small puzzle games is a nice way of improving your
+							programming skills as those games tend to present you...
+						</div>
+					</article>
+				</div>
+			</main>
+			<aside class="right-sidebar">
+				<h3>Recent Comments</h3>
+				<article>
+					<p>
+						"I really wish people would spend more time writing clean code
+						rather than clever code"<br />
+						<em>- Jane Doe</em>
+					</p>
+				</article>
+				<article>
+					<p>
+						"We need to be careful adopting new technologies."<br />
+						<em>- Jack Dawson</em>
+					</p>
+				</article>
+				<article>
+					<p>
+						"Building games in JavaScript can help you master the language"<br />
+						<em>- Kate Winslet</em>
+					</p>
+				</article>
+				<article>
+					<p>
+						"JQuery never hurt no one :)"<br />
+						<em>- First Coder</em>
+					</p>
+				</article>
+			</aside>
+			<footer>
+				Made with <span class="red">❤</span> by Faisal and Friends
+			</footer>
+		</div>
+		<script>
+			const toggleTheme = () => {
+				const body = document.querySelector("body");
+				if (body.classList.contains("light")) {
+					body.classList.remove("light");
+					document.getElementById("moon").style.display = "none";
+					document.getElementById("sun").style.display = "inline";
+				} else {
+					body.classList.add("light");
+					document.getElementById("sun").style.display = "none";
+					document.getElementById("moon").style.display = "inline";
+				}
+			};
+		</script>
+	</body>
+</html>

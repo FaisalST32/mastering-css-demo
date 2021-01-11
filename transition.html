@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			@keyframes bounce {
+				0% {
+          transform: translate(0);
+          background: red;
+				}
+				25% {
+          transform: translate(150px, 300px);
+          background: teal;
+				}
+				75% {
+          transform: translate(300px, 0);
+          background: violet;
+				}
+				100% {
+          transform: translate(0);
+          background: red;
+				}
+      }
+      
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+          
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+			.container {
+				height: 400px;
+			}
+
+			.ball {
+				height: 40px;
+				width: 40px;
+				background: red;
+				overflow: show;
+				border-radius: 20px;
+				animation-name: bounce;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+      }
+      
+      .loader {
+        border: solid 8px lightblue;
+        height: 60px;
+        width: 60px;
+        border-radius: 30px;
+        border-top-color: blue;
+        box-sizing: border-box;
+        animation: spin 1s linear infinite;
+      }
+
+      .box {
+        height: 150px;
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: lightseagreen;
+        color: white;
+        font-size: 3rem;
+        transition-property: background-color, border-radius, transform;
+        transition-duration: 1s;
+        transition-timing-function: ease-out;
+        transition-delay: 1s, 0s, 0s;
+      }
+
+      .box:hover {
+        background-color: red;
+        border-radius: 30px;
+        transform: rotate(360deg)
+      }
+
+      .button {
+        background-color: purple;
+        color: white;
+        padding: 10px 20px;
+        width: fit-content;
+        margin: 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 200ms ease-out;
+      }
+      .button:hover {
+        background-color: red;
+      }
+      .button:active {
+        background-color: purple;
+      }
+		</style>
+	</head>
+	<body>
+
+    <div class="box">
+      Box
+    </div>
+    <div class="button">Press me</div>
+		<div class="container">
+			<div class="ball"></div>
+    </div>
+    <div class="loader">
+
+    </div>
+	</body>
+</html>
